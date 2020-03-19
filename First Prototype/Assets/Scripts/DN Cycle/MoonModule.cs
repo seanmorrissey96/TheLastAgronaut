@@ -1,0 +1,16 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoonModule : DNModuleBase
+{
+    [SerializeField] private Light moon;
+    [SerializeField] private Gradient moonColor;
+    [SerializeField] private float baseIntesity;
+
+    public override void UpdateModule(float intensity)
+    {
+        moon.color = moonColor.Evaluate(1 - intensity);
+        moon.intensity = (1 - intensity) * baseIntesity + 0.05f;
+    }
+}
