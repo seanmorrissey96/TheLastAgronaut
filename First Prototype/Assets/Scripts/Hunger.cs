@@ -40,5 +40,24 @@ public class Hunger : MonoBehaviour
         {
             hungerToDisplay = 0;
         }
+
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            FeedSheep();
+        }
+    }
+
+    void FeedSheep()
+    {
+        if(currentHunger <= 85)
+        {
+            currentHunger = currentHunger + 15;
+            Debug.Log("Yummy! Thanks Penelope!");
+        }
+        else
+        {
+            currentHunger = 100;
+            Debug.Log("Wow, I'm full and can't eat that all Penelope!");
+        }
     }
 }

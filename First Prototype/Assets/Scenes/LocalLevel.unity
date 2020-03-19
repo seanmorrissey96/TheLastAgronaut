@@ -1956,6 +1956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 407077336}
+  isActive: 0
 --- !u!65 &69723127
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16734,6 +16735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 1860386275}
+  isActive: 0
 --- !u!65 &563341322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32447,6 +32449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 1569353226}
+  isActive: 0
 --- !u!65 &1184387327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57434,7 +57437,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ee7dd847b2513154da0fc027cfb5d5fc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ee7dd847b2513154da0fc027cfb5d5fc,
         type: 3}
@@ -57987,6 +57990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 1341678258}
+  isActive: 0
 --- !u!65 &2042555317
 BoxCollider:
   m_ObjectHideFlags: 0

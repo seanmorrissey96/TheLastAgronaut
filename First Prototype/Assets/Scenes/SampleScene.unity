@@ -3898,6 +3898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focus: {fileID: 0}
   Speed: 10
+  anim: {fileID: 0}
 --- !u!136 &5759803800381865269
 CapsuleCollider:
   m_ObjectHideFlags: 0

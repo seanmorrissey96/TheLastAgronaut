@@ -37,7 +37,7 @@ namespace Assets.Scripts.FSM.States
                 //Increment _totalDuration while the NPC is waiting
                 _totalDuration += Time.deltaTime;
 
-                Debug.Log("Updating Idle State: " + _totalDuration + " seconds.");
+                //Debug.Log("Updating Idle State: " + _totalDuration + " seconds.");
 
                 //Change to Patrol state once the NPC has waited long enough
                 if(_totalDuration >= _idleDuration)

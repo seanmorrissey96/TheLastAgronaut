@@ -5,17 +5,21 @@ using UnityEngine;
 public class ShowUI : MonoBehaviour
 {
     public GameObject uiObject;
+    public bool isActive;
+
     void Start()
     {
         uiObject.SetActive(false);
+
     }
 
     private void OnTriggerEnter(Collider player)
     {
+        //Debug.Log(hunger);
         if(player.gameObject.tag == "Player")
         {
             uiObject.SetActive(true);
-            
+            isActive = true;
             //StartCoroutine("WaitForSec");
         }
     }
@@ -25,7 +29,7 @@ public class ShowUI : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             uiObject.SetActive(false);
-            
+            isActive = false;
             //StartCoroutine("WaitForSec");
         }
     }
