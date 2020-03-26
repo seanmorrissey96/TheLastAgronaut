@@ -76,5 +76,14 @@ public class ThirdPersonCharacterController : MonoBehaviour
                 SetFocus(interactable);
             }
         }
+        else if(coll.collider.tag == "Flower")
+        {
+            Debug.Log("Here is a flower");
+            
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Flower UI Stuff");
+            }
+        }
     }
 }
