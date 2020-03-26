@@ -12,6 +12,7 @@ namespace Assets.Scripts.FSM
     public class FiniteStateMachine : MonoBehaviour
     {
         AbstractFSMState _currentState;
+        public Animator anim;
 
         [SerializeField]
         List<AbstractFSMState> _validStates;
@@ -63,6 +64,8 @@ namespace Assets.Scripts.FSM
         public void Start()
         {
             EnterState(FSMStateType.IDLE);
+
+            anim = GetComponent<Animator>();
         }
 
         public void Update()
@@ -71,6 +74,12 @@ namespace Assets.Scripts.FSM
             {
                 _currentState.UpdateState();
             }
+
+            //if (_currentState != null)
+            //{
+            //    anim.SetBool("isIdle", true);
+            //}
+            
         }
 
         #region STATE MANAGEMENT
