@@ -26502,6 +26502,7 @@ GameObject:
   - component: {fileID: 467996138}
   - component: {fileID: 467996146}
   - component: {fileID: 467996147}
+  - component: {fileID: 467996148}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -26687,6 +26688,25 @@ CapsuleCollider:
   m_Height: 4.8311567
   m_Direction: 1
   m_Center: {x: 0.000007632048, y: 1.3761603, z: 0.32107267}
+--- !u!95 &467996148
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467996137}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &471571479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28051,6 +28071,7 @@ GameObject:
   - component: {fileID: 509134759}
   - component: {fileID: 509134758}
   - component: {fileID: 509134766}
+  - component: {fileID: 509134767}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -28222,6 +28243,25 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8f2cb7fe4a39514f9adf7d492f5474c, type: 3}
   - {fileID: 8300000, guid: 023de70e1e568fb4aa9af02c81491db3, type: 3}
   - {fileID: 8300000, guid: 0c6b6a7579c07324b9e7c010e0c45237, type: 3}
+--- !u!95 &509134767
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509134757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &510961822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30148,6 +30188,7 @@ GameObject:
   - component: {fileID: 554299337}
   - component: {fileID: 554299345}
   - component: {fileID: 554299346}
+  - component: {fileID: 554299347}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -30333,6 +30374,25 @@ CapsuleCollider:
   m_Height: 4.91714
   m_Direction: 1
   m_Center: {x: 3.0087304e-11, y: 1.3107284, z: -0.021480234}
+--- !u!95 &554299347
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554299336}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &556744724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: b723a6b8d3674de49af13621951245db,
@@ -77647,6 +77707,7 @@ GameObject:
   - component: {fileID: 1578833388}
   - component: {fileID: 1578833396}
   - component: {fileID: 1578833397}
+  - component: {fileID: 1578833398}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -77832,6 +77893,25 @@ CapsuleCollider:
   m_Height: 3.2157843
   m_Direction: 1
   m_Center: {x: -0.000007632048, y: 1.0248151, z: -0.010553464}
+--- !u!95 &1578833398
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578833387}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1581674874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87034,6 +87114,7 @@ GameObject:
   - component: {fileID: 1704377200}
   - component: {fileID: 1704377199}
   - component: {fileID: 1704377207}
+  - component: {fileID: 1704377208}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -87205,6 +87286,25 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8f2cb7fe4a39514f9adf7d492f5474c, type: 3}
   - {fileID: 8300000, guid: 023de70e1e568fb4aa9af02c81491db3, type: 3}
   - {fileID: 8300000, guid: 0c6b6a7579c07324b9e7c010e0c45237, type: 3}
+--- !u!95 &1704377208
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704377198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1706158375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100506,6 +100606,7 @@ GameObject:
   - component: {fileID: 1841629980}
   - component: {fileID: 1841629979}
   - component: {fileID: 1841629987}
+  - component: {fileID: 1841629988}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -100677,6 +100778,25 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8f2cb7fe4a39514f9adf7d492f5474c, type: 3}
   - {fileID: 8300000, guid: 023de70e1e568fb4aa9af02c81491db3, type: 3}
   - {fileID: 8300000, guid: 0c6b6a7579c07324b9e7c010e0c45237, type: 3}
+--- !u!95 &1841629988
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841629978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1843136005
 PrefabInstance:
   m_ObjectHideFlags: 0
