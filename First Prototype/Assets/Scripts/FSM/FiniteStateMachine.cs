@@ -75,9 +75,13 @@ namespace Assets.Scripts.FSM
                 _currentState.UpdateState();
             }
 
-            //if (_currentState != null)
+            if (_currentState != null)
+            {
+                anim.SetBool("isWalking", true);
+            }
+            //else
             //{
-            //    anim.SetBool("isIdle", true);
+            //    anim.SetBool("isWalking", false)
             //}
             
         }

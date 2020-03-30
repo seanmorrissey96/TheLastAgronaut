@@ -19,7 +19,7 @@ public class MenuScript : MonoBehaviour
 
     void playGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     void OpenSettingsMenu()
