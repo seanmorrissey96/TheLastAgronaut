@@ -34,7 +34,7 @@ public class GPSPatrol : MonoBehaviour
         print("Patrolling to: " + patrollingTo);
         if (patrollingTo >= 3)
         {
-            dialogue1.text = "Some of the sheep seem a little down, go see if you can't cheer them up!";
+            dialogue1.text = "Some of the sheep seem a little down, go see if you can cheer them up!\nPress 'E' when near a sheep to feed it.";
             StartCoroutine("WaitForSec");
         }
 
