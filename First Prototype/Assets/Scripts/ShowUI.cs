@@ -6,6 +6,7 @@ public class ShowUI : MonoBehaviour
 {
     public GameObject uiObject;
     public bool isActive;
+    public Item cut;
 
     void Start()
     {
@@ -31,6 +32,10 @@ public class ShowUI : MonoBehaviour
             uiObject.SetActive(false);
             isActive = false;
             //StartCoroutine("WaitForSec");
+            if(gameObject.tag == "Flower")
+            {
+                Inventory.instance.Add(cut);
+            }
         }
     }
 

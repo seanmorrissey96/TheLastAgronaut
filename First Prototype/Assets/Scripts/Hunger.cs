@@ -12,6 +12,7 @@ public class Hunger : MonoBehaviour
     public RawImage sheepMoodImage;
     public float currentHunger;
     public int hungerToDisplay;
+    public Item milk;
     void Start()
     {
         hungerCounter.text = "100";
@@ -59,5 +60,6 @@ public class Hunger : MonoBehaviour
             currentHunger = 100;
             Debug.Log("Wow, I'm full and can't eat that all Penelope!");
         }
+        Inventory.instance.Add(milk);
     }
 }

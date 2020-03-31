@@ -16,7 +16,7 @@ public class Crafting : MonoBehaviour
                 canvasGroupCrafting.alpha = 1;
                 canvasGroupCrafting.blocksRaycasts = true;
                 Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.lockState = CursorLockMode.None;
                 camera.clearFlags = CameraClearFlags.Nothing;
                 camera.cullingMask = 0;
             }

@@ -45,10 +45,18 @@ public class InventoryUI : MonoBehaviour
             }
             else if (inventory.itemAdded.name == "Cutting")
             {
-                if (i > 1)
+                if (i == 2)
                 {
                     slots[i].AddItem(inventory.items[i]);
                     counts[i].text = inventory.cutDictionary.Keys.Count.ToString();
+                }
+            }
+            else if(inventory.itemAdded.name == "Ammo")
+            {
+                if(i == 3)
+                {
+                    slots[i].AddItem(inventory.items[i]);
+                    counts[i].text = inventory.ammoDictionary.Keys.Count.ToString();
                 }
             }
         }

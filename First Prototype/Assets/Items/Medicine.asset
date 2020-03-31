@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Medicine
   m_EditorClassIdentifier: 
   name: Medicine
-  icon: {fileID: 21300000, guid: 6bcaf38146001534294ab8618db8cff8, type: 3}
+  icon: {fileID: 21300000, guid: cda9f23038653ff4fb9db32df6c65df2, type: 3}
