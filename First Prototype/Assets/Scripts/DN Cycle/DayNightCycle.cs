@@ -18,6 +18,13 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private float sunBaseIntensity = 1f;
     [SerializeField] private float sunVariation = 1.5f;
     [SerializeField] private Gradient sunColor;
+    [SerializeField] private AudioSource dSounds;
+    [SerializeField] private AudioSource nSounds;
+    [SerializeField] private bool isMorning;
+    [SerializeField] private bool isNight;
+
+    [SerializeField] private AudioClip morningSounds;
+    [SerializeField] private AudioClip nightSounds;
 
     private List<DNModuleBase> moduleList = new List<DNModuleBase>();
 
@@ -30,6 +37,13 @@ public class DayNightCycle : MonoBehaviour
     { get { return timeOfDay; }}
     public int DayNumber 
     { get { return dayNumber;}}
+
+    private void Start()
+    {
+        //timeOfDay = 2.0f;
+        isMorning = false;
+        isNight = false;
+    }
 
     private void Update()
     {
@@ -45,6 +59,29 @@ public class DayNightCycle : MonoBehaviour
         SunIntensity();
         AdjustSunColor();
         UpdateModules();
+
+        if (!isMorning && timeOfDay > 0.2 && timeOfDay < 0.5)
+        {
+            dSounds.PlayOneShot(morningSounds);
+            isMorning = true;
+        }
+        else if (timeOfDay > 0.5)
+        {
+            dSounds.Stop();
+            isMorning = false;
+        }
+
+        if (!isNight && timeOfDay > 0.75)
+        {
+            nSounds.PlayOneShot(nightSounds);
+            isNight = true;
+        }
+
+        else if (timeOfDay >= 0.99)
+        {
+            nSounds.Stop();
+            isNight = false;
+        }
     }
 
     private void UpdateTimeScale()
