@@ -10,12 +10,20 @@ public class LevelChanger : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    FadeToLevel(1);
-        //}
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            FadeToLevel(2);
+        }
 
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            FadeToLevel(3);
+        }
 
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            FadeToLevel(4);
+        }
     }
 
 

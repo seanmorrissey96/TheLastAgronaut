@@ -12,12 +12,18 @@ public class Hunger : MonoBehaviour
     public RawImage sheepMoodImage;
     public float currentHunger;
     public int hungerToDisplay;
-    public Item milk;
+
+    public GameObject penelopeDialoguePanel;
+    public Text dialogue1;
+    public bool hasBeenFed;
+
     void Start()
     {
         hungerCounter.text = "100";
         currentHunger = 100;
         sheepMoodImage.texture = sheepMoodHappy;
+        penelopeDialoguePanel.SetActive(false);
+        hasBeenFed = false;
     }
 
     // Update is called once per frame
@@ -26,40 +32,65 @@ public class Hunger : MonoBehaviour
         currentHunger -= 1 * Time.deltaTime;
         hungerToDisplay = Mathf.RoundToInt(currentHunger);
         hungerCounter.text = hungerToDisplay.ToString();
-        
+
+        if (hungerToDisplay > 90)
+        {
+            sheepMoodImage.texture = sheepMoodHappy;
+        }
+
         if (hungerToDisplay < 90)
         {
             sheepMoodImage.texture = sheepMoodSad;
         }
 
-        if(hungerToDisplay < 85)
+        if (hungerToDisplay < 85)
         {
             sheepMoodImage.texture = sheepMoodAngry;
         }
 
-        if(hungerToDisplay <= 0)
+        if (hungerToDisplay <= 0)
         {
             hungerToDisplay = 0;
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             FeedSheep();
+        }
+
+        if (hasBeenFed)
+        {
+            penelopeDialoguePanel.SetActive(true);
+            dialogue1.text = "test";
+            StartCoroutine("WaitForSec");
         }
     }
 
     void FeedSheep()
     {
-        if(currentHunger <= 85)
+        if (currentHunger <= 85)
         {
             currentHunger = currentHunger + 15;
+            hungerToDisplay = Mathf.RoundToInt(currentHunger);
             Debug.Log("Yummy! Thanks Penelope!");
         }
         else
         {
             currentHunger = 100;
+            hungerToDisplay = Mathf.RoundToInt(currentHunger);
             Debug.Log("Wow, I'm full and can't eat that all Penelope!");
+            //sheepMoodImage.texture = sheepMoodHappy;
         }
-        Inventory.instance.Add(milk);
+
+
+        hasBeenFed = true;
+        //StartCoroutine("WaitForSec");
+    }
+
+    IEnumerator WaitForSec()
+    {
+        hasBeenFed = false;
+        yield return new WaitForSeconds(6);
+        penelopeDialoguePanel.SetActive(false);
     }
 }
