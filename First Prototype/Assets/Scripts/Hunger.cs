@@ -12,6 +12,7 @@ public class Hunger : MonoBehaviour
     public RawImage sheepMoodImage;
     public float currentHunger;
     public int hungerToDisplay;
+    public Item milk;
 
     public GameObject penelopeDialoguePanel;
     public Text dialogue1;
@@ -82,7 +83,7 @@ public class Hunger : MonoBehaviour
             //sheepMoodImage.texture = sheepMoodHappy;
         }
 
-
+        //Inventory.instance.Add(milk);
         hasBeenFed = true;
         //StartCoroutine("WaitForSec");
     }
