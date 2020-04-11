@@ -10,7 +10,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private bool use24clock = true;
     [SerializeField] private Text clockText;
     [SerializeField] private Text dayNumberText;
-    [SerializeField] [Range(0f, 1f)] private float timeOfDay;
+    [SerializeField] [Range(0f, 1f)] public float timeOfDay;
     [SerializeField] private int dayNumber = 1;
     [SerializeField] private Transform dailyRotation;
     [SerializeField] private Light sun;
@@ -81,6 +81,7 @@ public class DayNightCycle : MonoBehaviour
         {
             nSounds.Stop();
             isNight = false;
+            pause = true;
         }
     }
 

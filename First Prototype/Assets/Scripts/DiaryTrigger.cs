@@ -9,6 +9,8 @@ public class DiaryTrigger : MonoBehaviour
     public GameObject uiObject3;
     public bool isActive;
     private int dayCount = 1;
+
+    public DayNightCycle dnc;
     void Start()
     {
         uiObject1.SetActive(false);
@@ -23,21 +25,21 @@ public class DiaryTrigger : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("E key in trigger");
-                if (dayCount == 1)
+                if (dayCount == 1 && dnc.pause == true)
                 {
                     Debug.Log("Click 1");
                     uiObject1.SetActive(true);
                     isActive = true;
                     dayCount = 2;
                 }
-                else if (dayCount == 2 && isActive != true)
+                else if (dayCount == 2 && isActive != true && dnc.pause == true)
                 {
                     Debug.Log("Click 2");
                     uiObject2.SetActive(true);
                     isActive = true;
                     dayCount = 3;
                 }
-                else if (dayCount == 3 && isActive != true)
+                else if (dayCount == 3 && isActive != true && dnc.pause == true)
                 {
                     Debug.Log("Click 3");
                     uiObject3.SetActive(true);
@@ -57,16 +59,24 @@ public class DiaryTrigger : MonoBehaviour
             {
                 uiObject1.SetActive(false);
                 isActive = false;
+                dnc.pause = false;
+                dnc.timeOfDay = 1;
             }
             else if(dayCount == 3)
             {
                 uiObject2.SetActive(false);
                 isActive = false;
+
+                dnc.pause = false;
+                dnc.timeOfDay = 1;
             }
             else if((dayCount == 1) && isActive == true)
             {
                 uiObject3.SetActive(false);
                 isActive = false;
+
+                dnc.pause = false;
+                dnc.timeOfDay = 1;
             }
         }
     }

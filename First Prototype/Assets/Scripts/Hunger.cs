@@ -61,8 +61,8 @@ public class Hunger : MonoBehaviour
 
         if (hasBeenFed)
         {
-            penelopeDialoguePanel.SetActive(true);
-            dialogue1.text = "test";
+            //penelopeDialoguePanel.SetActive(true);
+            //dialogue1.text = "test";
             StartCoroutine("WaitForSec");
         }
     }
