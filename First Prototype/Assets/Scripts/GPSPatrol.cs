@@ -37,8 +37,9 @@ public class GPSPatrol : MonoBehaviour
             dialogue1.text = "Some of the sheep seem a little down, go see if you can cheer them up!\nPress 'E' when near a sheep to feed it.";
             StartCoroutine("WaitForSec");
         }
-
-        if (Vector3.Distance(transform.position, moveSpots[patrollingTo].position) < 0.5f)
+        print("DISTANCE TO DEST: " + Vector3.Distance(transform.position, moveSpots[patrollingTo].position));
+        print("WAITTIME: " + waitTime);
+        if (Vector3.Distance(transform.position, moveSpots[patrollingTo].position) < 1.2f)
         {
             if (waitTime <= 0)
             {
