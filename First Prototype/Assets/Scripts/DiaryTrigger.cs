@@ -7,6 +7,19 @@ public class DiaryTrigger : MonoBehaviour
     public GameObject uiObject1;
     public GameObject uiObject2;
     public GameObject uiObject3;
+
+    public GameObject barnDay1;
+    public GameObject barnDay2;
+    public GameObject barnDoor;
+
+    public GameObject plantDay1;
+    public GameObject plantDay2;
+
+    public GameObject treeDay1;
+    public GameObject treeDay2;
+
+    public GameObject enemyPlant;
+
     public bool isActive;
     private int dayCount = 1;
 
@@ -16,6 +29,7 @@ public class DiaryTrigger : MonoBehaviour
         uiObject1.SetActive(false);
         uiObject2.SetActive(false);
         uiObject3.SetActive(false);
+        enemyPlant.SetActive(false);
     }
 
     private void OnTriggerStay(Collider player)
@@ -30,6 +44,7 @@ public class DiaryTrigger : MonoBehaviour
                     Debug.Log("Click 1");
                     uiObject1.SetActive(true);
                     isActive = true;
+
                     dayCount = 2;
                 }
                 else if (dayCount == 2 && isActive != true && dnc.pause == true)
@@ -61,6 +76,16 @@ public class DiaryTrigger : MonoBehaviour
                 isActive = false;
                 dnc.pause = false;
                 dnc.timeOfDay = 1;
+
+                barnDay1.SetActive(false);
+                barnDay2.SetActive(true);
+                barnDoor.SetActive(true);
+
+                treeDay1.SetActive(false);
+                treeDay2.SetActive(true);
+
+                plantDay1.SetActive(false);
+                plantDay2.SetActive(true);
             }
             else if(dayCount == 3)
             {
@@ -69,6 +94,8 @@ public class DiaryTrigger : MonoBehaviour
 
                 dnc.pause = false;
                 dnc.timeOfDay = 1;
+
+                enemyPlant.SetActive(true);
             }
             else if((dayCount == 1) && isActive == true)
             {
