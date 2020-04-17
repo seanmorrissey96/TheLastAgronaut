@@ -15,6 +15,7 @@ public class GPSPatrol : MonoBehaviour
 
     public GameObject gpsDialoguePanel;
     public Text dialogue1;
+    public bool showReminderText;
 
     NavMeshAgent _navMeshAgent;
     void Start()
@@ -23,10 +24,11 @@ public class GPSPatrol : MonoBehaviour
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
         waitTime = startWaitTime;
         patrollingTo = 0;
+        showReminderText = false;
     }
 
     void Update()
-    {
+    {   
         Vector3 targetVector = moveSpots[patrollingTo].transform.position;
         _navMeshAgent.SetDestination(targetVector);
         //transform.position = Vector3.MoveTowards(transform.position, moveSpots[patrollingTo].position, speed * Time.deltaTime);
@@ -37,8 +39,8 @@ public class GPSPatrol : MonoBehaviour
             dialogue1.text = "Some of the sheep seem a little down, go see if you can cheer them up!\nPress 'E' when near a sheep to feed it.";
             StartCoroutine("WaitForSec");
         }
-        print("DISTANCE TO DEST: " + Vector3.Distance(transform.position, moveSpots[patrollingTo].position));
-        print("WAITTIME: " + waitTime);
+        //print("DISTANCE TO DEST: " + Vector3.Distance(transform.position, moveSpots[patrollingTo].position));
+        //print("WAITTIME: " + waitTime);
         if (Vector3.Distance(transform.position, moveSpots[patrollingTo].position) < 1.2f)
         {
             if (waitTime <= 0)
@@ -55,11 +57,13 @@ public class GPSPatrol : MonoBehaviour
                 waitTime -= Time.deltaTime;
             }
         }
+        print("to be shown: " + showReminderText);
     }
 
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(6);
         gpsDialoguePanel.SetActive(false);
+        showReminderText = true;
     }
 }

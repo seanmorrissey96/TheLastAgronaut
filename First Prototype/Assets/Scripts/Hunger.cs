@@ -63,7 +63,7 @@ public class Hunger : MonoBehaviour
         {
             //penelopeDialoguePanel.SetActive(true);
             //dialogue1.text = "test";
-            StartCoroutine("WaitForSec");
+            //StartCoroutine("WaitForSec");
         }
     }
 
@@ -85,6 +85,7 @@ public class Hunger : MonoBehaviour
 
         //Inventory.instance.Add(milk);
         hasBeenFed = true;
+        //Debug.Log("Wow, I'm full and can't eat that all Penelope!");
         //StartCoroutine("WaitForSec");
     }
 
