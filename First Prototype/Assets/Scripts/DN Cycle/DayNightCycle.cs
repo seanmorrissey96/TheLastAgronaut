@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +26,11 @@ public class DayNightCycle : MonoBehaviour
 
     [SerializeField] private AudioClip morningSounds;
     [SerializeField] private AudioClip nightSounds;
+
+    [SerializeField] private float spaceshipCue = 0.6f;
+    [SerializeField] private AudioSource spaceshipSound;
+
+    public event EventHandler SpaceshipMove;
 
     private List<DNModuleBase> moduleList = new List<DNModuleBase>();
 
@@ -59,6 +65,12 @@ public class DayNightCycle : MonoBehaviour
         SunIntensity();
         AdjustSunColor();
         UpdateModules();
+        MoveSpaceship();
+
+        if (!spaceshipSound.isPlaying && timeOfDay > spaceshipCue)
+        {
+            spaceshipSound.Play();
+        }
 
         if (!isMorning && timeOfDay > 0.2 && timeOfDay < 0.5)
         {
@@ -189,6 +201,14 @@ public class DayNightCycle : MonoBehaviour
         foreach (DNModuleBase module in moduleList)
         {
             module.UpdateModule(intensity);
+        }
+    }
+
+    private void MoveSpaceship()
+    {
+        if (timeOfDay > spaceshipCue)
+        {
+            SpaceshipMove?.Invoke(this, EventArgs.Empty);
         }
     }
 }
