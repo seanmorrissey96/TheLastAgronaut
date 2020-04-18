@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 79be5a8bd5295254f940f3bb809b16f3
+ModelImporter:
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'MaramaRibcage' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'MaramaNeck' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'MaramaRCollarbone'
+      has translation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: MaramaPelvis
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLThigh
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRThigh
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLCalf
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRCalf
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLAnkle
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRAnkle
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaSpine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaSpine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaHead
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLUpperArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRUpperArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLPalm
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRPalm
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaLToe
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaRToe
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MaramaSpine3
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: penelope_idle (3)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Penelope
+      parentName: penelope_idle (3)(Clone)
+      position: {x: -475.01035, y: -360.30435, z: 189.33188}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 0.555592, y: 0.555592, z: 1.0015991}
+    - name: MaramaLIKTarget
+      parentName: penelope_idle (3)(Clone)
+      position: {x: -474.66165, y: -365.60718, z: 189.40508}
+      rotation: {x: 0.49999997, y: -0.4999999, z: -0.50000006, w: 0.5000001}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: MaramaRIKTarget
+      parentName: penelope_idle (3)(Clone)
+      position: {x: -474.66165, y: -365.60718, z: 189.40508}
+      rotation: {x: 0.49999997, y: -0.4999999, z: -0.50000006, w: 0.5000001}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: MaramaLPlatform
+      parentName: penelope_idle (3)(Clone)
+      position: {x: -475.15662, y: -365.60718, z: 189.50507}
+      rotation: {x: 0.48937017, y: -0.48937002, z: -0.5104085, w: 0.51040864}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: MaramaRPlatform
+      parentName: penelope_idle (3)(Clone)
+      position: {x: -474.1668, y: -365.60718, z: 189.50507}
+      rotation: {x: 0.5104085, y: -0.51040846, z: -0.48937023, w: 0.4893703}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: Marama
+      parentName: penelope_idle (3)(Clone)
+      position: {x: -474.66165, y: -365.60718, z: 189.40508}
+      rotation: {x: 0.49999994, y: -0.49999994, z: -0.50000006, w: 0.5000001}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: MaramaPelvis
+      parentName: penelope_idle (3)(Clone)
+      position: {x: 0, y: 3.5427551, z: -0.07852173}
+      rotation: {x: -0.53408843, y: 0.46341065, z: 0.53408855, w: -0.4634108}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999994}
+    - name: MaramaLThigh
+      parentName: MaramaPelvis
+      position: {x: 0.17700624, y: 0.10452695, z: 0.32623124}
+      rotation: {x: 0.064883545, y: -0.99717844, z: 0.00065749884, w: -0.0377481}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000005}
+    - name: MaramaLCalf
+      parentName: MaramaLThigh
+      position: {x: -1.5147231, y: 0, z: 0}
+      rotation: {x: 0.0014699068, y: 0.020676317, z: 0.13120613, w: 0.99113846}
+      scale: {x: 1, y: 1.0000006, z: 1.0000007}
+    - name: MaramaLAnkle
+      parentName: MaramaLCalf
+      position: {x: -1.5234543, y: 0, z: 0.000049609374}
+      rotation: {x: 0.014834353, y: 0.0026935039, z: -0.5913345, w: 0.8062855}
+      scale: {x: 1.0000001, y: 1.0000006, z: 1.0000013}
+    - name: MaramaLToe
+      parentName: MaramaLAnkle
+      position: {x: -0.39702383, y: -0.07384355, z: -0.0030757813}
+      rotation: {x: -0.014934598, y: 0.009423473, z: -0.28281996, w: 0.9590105}
+      scale: {x: 1.0000002, y: 1.0000007, z: 1.0000005}
+    - name: MaramaSpine1
+      parentName: MaramaPelvis
+      position: {x: -0.24174649, y: -0.04440039, z: 0.009376172}
+      rotation: {x: -0.000000104308114, y: 0.00000004470348, z: 0.0057398225, w: 0.99998355}
+      scale: {x: 1.0000006, y: 1.000001, z: 1.0000007}
+    - name: MaramaSpine2
+      parentName: MaramaSpine1
+      position: {x: -0.47034648, y: 0, z: 0}
+      rotation: {x: -0.0000012316506, y: -0.00000010059904, z: -0.113423, w: -0.9935468}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999993}
+    - name: MaramaSpine3
+      parentName: MaramaSpine2
+      position: {x: -0.47034648, y: 0, z: 0}
+      rotation: {x: -0.000001563621, y: -0.000000018817799, z: 0.0032379325, w: 0.99999475}
+      scale: {x: 1.0000014, y: 1.0000007, z: 1.0000007}
+    - name: MaramaRibcage
+      parentName: MaramaSpine3
+      position: {x: -0.4703961, y: 0.000012402344, z: 0}
+      rotation: {x: 0.00000041395595, y: -0.000000057175072, z: 0.014615847, w: 0.99989325}
+      scale: {x: 1.0000002, y: 1, z: 1.0000004}
+    - name: MaramaNeck
+      parentName: MaramaRibcage
+      position: {x: -0.2534543, y: -0.002269629, z: 0}
+      rotation: {x: 0.0000002916977, y: 0.00000010918752, z: -0.20374922, w: 0.97902316}
+      scale: {x: 1.0000008, y: 1.0000008, z: 1.0000008}
+    - name: MaramaHead
+      parentName: MaramaNeck
+      position: {x: -0.43331307, y: 0, z: 0}
+      rotation: {x: 0.00000035762784, y: 0.00000016391276, z: -0.08896094, w: -0.9960351}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: MaramaLCollarbone
+      parentName: MaramaRibcage
+      position: {x: -0.1253877, y: 0.26119336, z: 0.020885546}
+      rotation: {x: 0.16010253, y: 0.7243234, z: 0.17586027, w: 0.6471446}
+      scale: {x: 1.0000005, y: 1, z: 1.0000001}
+    - name: MaramaLUpperArm
+      parentName: MaramaLCollarbone
+      position: {x: -0.51980704, y: 0, z: 0.000024804687}
+      rotation: {x: 0.17959014, y: -0.06805161, z: -0.22565605, w: 0.95508933}
+      scale: {x: 1.0000005, y: 0.99999976, z: 0.9999995}
+    - name: MaramaLForeArm
+      parentName: MaramaLUpperArm
+      position: {x: -0.8308082, y: 0, z: -0.000024804687}
+      rotation: {x: -0.18514498, y: -0.026734615, z: -0.03177288, w: 0.9818335}
+      scale: {x: 1.0000007, y: 0.99999976, z: 0.9999989}
+    - name: MaramaLPalm
+      parentName: MaramaLForeArm
+      position: {x: -0.70579255, y: 0, z: 0.000049609374}
+      rotation: {x: -0.75433004, y: 0.05275911, z: 0.11191558, w: 0.64473057}
+      scale: {x: 1.0000013, y: 0.9999979, z: 1.0000011}
+    - name: MaramaLThumb1
+      parentName: MaramaLPalm
+      position: {x: -0.028227733, y: -0.029418359, z: 0.13739316}
+      rotation: {x: 0.6251316, y: 0.40691942, z: 0.112324044, w: 0.65651387}
+      scale: {x: 0.9999995, y: 0.99999815, z: 1.0000033}
+    - name: MaramaLThumb2
+      parentName: MaramaLThumb1
+      position: {x: -0.19717246, y: 0.000024804687, z: 0.000049609374}
+      rotation: {x: -0.019854136, y: -0.09202287, z: 0.06586496, w: 0.9933778}
+      scale: {x: 0.99999714, y: 1.0000018, z: 1.0000018}
+    - name: MaramaLFingers1
+      parentName: MaramaLPalm
+      position: {x: -0.34741446, y: 0.026689844, z: -0.040754102}
+      rotation: {x: 0.023994947, y: -0.09557722, z: 0.22601923, w: 0.9691257}
+      scale: {x: 0.9999987, y: 1.0000001, z: 1.0000021}
+    - name: MaramaLFingers2
+      parentName: MaramaLFingers1
+      position: {x: -0.19092168, y: -0.000049609374, z: 0}
+      rotation: {x: -0.016310798, y: -0.013940315, z: 0.09368764, w: 0.9953704}
+      scale: {x: 0.9999988, y: 1.0000005, z: 1.0000021}
+    - name: MaramaLIndex1
+      parentName: MaramaLPalm
+      position: {x: -0.322709, y: -0.018975586, z: 0.14046894}
+      rotation: {x: 0.22002858, y: 0.06463026, z: 0.24370903, w: 0.94234616}
+      scale: {x: 0.99999774, y: 1.0000014, z: 1.0000007}
+    - name: MaramaLIndex2
+      parentName: MaramaLIndex1
+      position: {x: -0.1905248, y: 0, z: 0}
+      rotation: {x: -0.006135512, y: 0.006708732, z: 0.1114056, w: 0.99373347}
+      scale: {x: 0.999997, y: 1.0000007, z: 1.0000026}
+    - name: MaramaRCollarbone
+      parentName: MaramaRibcage
+      position: {x: -0.1254373, y: 0.26120576, z: -0.020885546}
+      rotation: {x: 0.16010244, y: 0.7243233, z: -0.17586038, w: -0.6471447}
+      scale: {x: 1.000001, y: 1.0000007, z: 1.0000005}
+    - name: MaramaRUpperArm
+      parentName: MaramaRCollarbone
+      position: {x: -0.51980704, y: 0, z: 0}
+      rotation: {x: -0.19278598, y: 0.072807305, z: -0.22692564, w: 0.95186}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1.0000002}
+    - name: MaramaRForeArm
+      parentName: MaramaRUpperArm
+      position: {x: -0.83078337, y: 0, z: 0}
+      rotation: {x: 0.1818943, y: 0.05289279, z: -0.026526924, w: 0.98153615}
+      scale: {x: 0.9999999, y: 1.0000007, z: 1.0000024}
+    - name: MaramaRPalm
+      parentName: MaramaRForeArm
+      position: {x: -0.70574296, y: -0.000024804687, z: 0}
+      rotation: {x: 0.7602029, y: 0.03423329, z: 0.014484028, w: 0.64862144}
+      scale: {x: 0.99999523, y: 1.0000036, z: 1.0000012}
+    - name: MaramaRThumb1
+      parentName: MaramaRPalm
+      position: {x: -0.028302148, y: -0.029418359, z: -0.13739316}
+      rotation: {x: -0.6251311, y: -0.40691888, z: 0.11232318, w: 0.6565147}
+      scale: {x: 0.99999857, y: 1.0000042, z: 0.99999714}
+    - name: MaramaRThumb2
+      parentName: MaramaRThumb1
+      position: {x: -0.19714765, y: -0.000012402344, z: 0}
+      rotation: {x: 0.019854397, y: 0.0920235, z: 0.065864526, w: 0.99337775}
+      scale: {x: 1.0000052, y: 0.9999993, z: 0.99999577}
+    - name: MaramaRFingers1
+      parentName: MaramaRPalm
+      position: {x: -0.34741446, y: 0.026789062, z: 0.040729295}
+      rotation: {x: -0.023998195, y: 0.09557559, z: 0.22601935, w: 0.9691257}
+      scale: {x: 1.0000027, y: 0.9999982, z: 1.0000004}
+    - name: MaramaRFingers2
+      parentName: MaramaRFingers1
+      position: {x: -0.19092168, y: 0.000049609374, z: 0.000006201172}
+      rotation: {x: 0.016300032, y: 0.013938395, z: 0.093687795, w: 0.9953706}
+      scale: {x: 1.0000038, y: 0.99999803, z: 1.0000004}
+    - name: MaramaRIndex1
+      parentName: MaramaRPalm
+      position: {x: -0.32251054, y: -0.01900039, z: -0.14046894}
+      rotation: {x: -0.22002915, y: -0.064631134, z: 0.24370836, w: 0.9423461}
+      scale: {x: 1.0000024, y: 0.9999984, z: 1.000001}
+    - name: MaramaRIndex2
+      parentName: MaramaRIndex1
+      position: {x: -0.1905248, y: 0, z: 0.000049609374}
+      rotation: {x: 0.006135363, y: -0.006708644, z: 0.11140583, w: 0.9937334}
+      scale: {x: 1.0000048, y: 0.999995, z: 0.9999998}
+    - name: MaramaRThigh
+      parentName: MaramaPelvis
+      position: {x: 0.17700624, y: 0.10452695, z: -0.32623124}
+      rotation: {x: 0.06488736, y: -0.9971782, z: -0.00065755844, w: 0.03774838}
+      scale: {x: 1.000001, y: 1.0000007, z: 1.0000007}
+    - name: MaramaRCalf
+      parentName: MaramaRThigh
+      position: {x: -1.5147231, y: 0, z: 0}
+      rotation: {x: -0.0014694001, y: -0.020683458, z: 0.13121869, w: 0.9911366}
+      scale: {x: 0.9999995, y: 0.99999994, z: 1.0000001}
+    - name: MaramaRAnkle
+      parentName: MaramaRCalf
+      position: {x: -1.5234791, y: 0, z: 0.000049609374}
+      rotation: {x: -0.014855487, y: -0.0027119496, z: -0.59136647, w: 0.80626154}
+      scale: {x: 0.9999991, y: 1.0000005, z: 1.0000004}
+    - name: MaramaRToe
+      parentName: MaramaRAnkle
+      position: {x: -0.39709824, y: -0.073806345, z: 0.0030261718}
+      rotation: {x: 0.014926562, y: -0.009394873, z: -0.28279015, w: 0.9590197}
+      scale: {x: 1, y: 1.0000006, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
