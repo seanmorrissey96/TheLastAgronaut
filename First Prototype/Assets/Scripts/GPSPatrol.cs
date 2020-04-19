@@ -32,8 +32,6 @@ public class GPSPatrol : MonoBehaviour
         Vector3 targetVector = moveSpots[patrollingTo].transform.position;
         _navMeshAgent.SetDestination(targetVector);
         //transform.position = Vector3.MoveTowards(transform.position, moveSpots[patrollingTo].position, speed * Time.deltaTime);
-        print("Distance to other: " + Vector3.Distance(transform.position, moveSpots[patrollingTo].position));
-        print("Patrolling to: " + patrollingTo);
         if (patrollingTo >= 3)
         {
             dialogue1.text = "Some of the sheep seem a little down, go see if you can cheer them up!\nPress 'E' when near a sheep to feed it.";
@@ -57,7 +55,6 @@ public class GPSPatrol : MonoBehaviour
                 waitTime -= Time.deltaTime;
             }
         }
-        print("to be shown: " + showReminderText);
     }
 
     IEnumerator WaitForSec()

@@ -20,6 +20,8 @@ public class DiaryTrigger : MonoBehaviour
 
     public GameObject enemyPlant;
 
+    public AudioSource asteroidSound;
+
     public bool isActive;
     private int dayCount = 1;
 
@@ -44,7 +46,7 @@ public class DiaryTrigger : MonoBehaviour
                     Debug.Log("Click 1");
                     uiObject1.SetActive(true);
                     isActive = true;
-
+                    asteroidSound.Play();
                     dayCount = 2;
                 }
                 else if (dayCount == 2 && isActive != true && dnc.pause == true)

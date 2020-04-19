@@ -12,7 +12,7 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private Text clockText;
     [SerializeField] private Text dayNumberText;
     [SerializeField] [Range(0f, 1f)] public float timeOfDay;
-    [SerializeField] private int dayNumber = 1;
+    [SerializeField] public static int dayNumber = 1;
     [SerializeField] private Transform dailyRotation;
     [SerializeField] private Light sun;
     [SerializeField] private float intensity;
@@ -27,8 +27,12 @@ public class DayNightCycle : MonoBehaviour
     [SerializeField] private AudioClip morningSounds;
     [SerializeField] private AudioClip nightSounds;
 
-    [SerializeField] private float spaceshipCue = 0.6f;
+    [SerializeField] private float spaceshipCue = 0.8f;
     [SerializeField] private AudioSource spaceshipSound;
+
+    [SerializeField] private AudioSource eerySound;
+    [SerializeField] private AudioClip eeryClip;
+    [SerializeField] private bool isDay2;
 
     public event EventHandler SpaceshipMove;
 
@@ -46,13 +50,22 @@ public class DayNightCycle : MonoBehaviour
 
     private void Start()
     {
-        //timeOfDay = 2.0f;
         isMorning = false;
         isNight = false;
+
+        //Starting/wake up time - 8AM
+        timeOfDay = 0.33f;
+        elapsedTime = 20f;
     }
 
     private void Update()
     {
+        if (!isDay2 && dayNumber == 2)
+        {
+            isDay2 = true;
+            eerySound.PlayOneShot(eeryClip);
+        }
+
         if (!pause)
         {
             UpdateTimeScale();
