@@ -23,7 +23,7 @@ public class DiaryTrigger : MonoBehaviour
     public AudioSource asteroidSound;
 
     public bool isActive;
-    private int dayCount = 1;
+    public int dayCount = 1;
 
     public DayNightCycle dnc;
     void Start()

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShowGPSReminderUI : MonoBehaviour
 {
@@ -13,22 +14,36 @@ public class ShowGPSReminderUI : MonoBehaviour
     public GameObject gps;
     public GameObject sheep;
     public GameObject flower;
+    public GameObject diary;
     public Item cut;
     public Text reminderText;
+    private string sceneName;
+    private int dayCount;
 
     void Start()
     {
         uiObject.SetActive(false);
+        
         //reminderText.text = "First Reminder";
         //toBeShown = gps.GetComponent<GPSPatrol>().showReminderText;
     }
 
     private void Update()
     {
+        if (diary != null)
+        {
+            dayCount = diary.GetComponent<DiaryTrigger>().dayCount;
+            Debug.Log("Day: " + dayCount);
+        }
+
+            Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
         toBeShown = gps.GetComponent<GPSPatrol>().showReminderText;
         sheepHaveBeenFed = sheep.GetComponent<Hunger>().hasBeenFed;
         flowerInteraction = flower.GetComponent<ShowUI>().flowerInteraction;
-        Debug.Log("Interacted" + flowerInteraction);
+        //Debug.Log("Interacted" + flowerInteraction);
+       
+        //Debug.Log("Scene: " + sceneName);
     }
 
     private void OnTriggerEnter(Collider player)
@@ -42,7 +57,7 @@ public class ShowGPSReminderUI : MonoBehaviour
                 //StartCoroutine("WaitForSec");
             }
         }
-        else if(toBeShown && flowerInteraction)
+        else if(toBeShown && flowerInteraction && dayCount == 1)
         {
             if (player.gameObject.tag == "Player" && flowerInteraction)
             {
@@ -51,7 +66,7 @@ public class ShowGPSReminderUI : MonoBehaviour
                 isActive = true;
             }
         }
-        else if(toBeShown && sheepHaveBeenFed)
+        else if(toBeShown && sheepHaveBeenFed && dayCount == 1)
         {
             if(player.gameObject.tag == "Player" && sheepHaveBeenFed && !flowerInteraction)
             {
@@ -60,6 +75,15 @@ public class ShowGPSReminderUI : MonoBehaviour
                 isActive = true;
             }
             
+        }
+        else if(toBeShown && sheepHaveBeenFed && dayCount == 2)
+        {
+            if (player.gameObject.tag == "Player")
+            {
+                reminderText.text = "Last night an asteroid hit the island!\nI'll have to fix the door in time for tomorrow.";
+                uiObject.SetActive(true);
+                isActive = true;
+            }
         }
         //Debug.Log(hunger);
         

@@ -5,15 +5,25 @@ using UnityEngine.UI;
 
 public class ShowUI : MonoBehaviour
 {
+    public GameObject diaryUI1;
+    public GameObject diaryUI2;
+    public GameObject diaryUI3;
     public GameObject uiObject;
+    public GameObject penelope;
     public bool isActive;
     public Item cut;
     public bool flowerInteraction;
     public GameObject sheep;
     public GameObject GPSReminder;
+    public GameObject diary;
     public Text GPSText;
     public bool sheepHaveBeenFed;
     public bool GoToBedPrompt;
+    public int dayCount = 0;
+
+    private bool dialogue1;
+    private bool dialogue2;
+    private float playerPosition;
 
     void Start()
     {
@@ -21,10 +31,38 @@ public class ShowUI : MonoBehaviour
         flowerInteraction = false;
         GoToBedPrompt = false;
         GPSReminder.SetActive(false);
-    }
+    } 
 
     void Update()
     {
+        if(penelope != null)
+        {
+            playerPosition = penelope.transform.position.x;
+        }
+        
+
+        if(diary != null && penelope != null)
+        {
+            dayCount = diary.GetComponent<DiaryTrigger>().dayCount;
+            
+
+            if (dayCount == 2 && !diaryUI1.activeSelf && playerPosition > 0 && !dialogue1)
+            {
+                dialogue1 = true;
+                GPSText.text = "Penelope! We have a problem!";
+                GPSReminder.SetActive(true);
+                StartCoroutine("WaitForSec");
+            }
+            //else if(dayCount == 2 && !diaryUI1.activeSelf && playerPosition < 0 && !dialogue2)
+            //{
+            //    dialogue2 = true;
+            //    GPSText.text = "Second Line";
+            //    GPSReminder.SetActive(true);
+            //    StartCoroutine("WaitForSec");
+            //}
+        }
+           
+
         if(sheep != null)
             sheepHaveBeenFed = sheep.GetComponent<Hunger>().hasBeenFed;
 
@@ -35,6 +73,7 @@ public class ShowUI : MonoBehaviour
             GPSReminder.SetActive(true);
             StartCoroutine("WaitForSec");
         }
+        
     }
 
     private void OnTriggerEnter(Collider player)
@@ -75,6 +114,7 @@ public class ShowUI : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         GPSReminder.SetActive(false);
+
         //Destroy(uiObject);
         //Destroy(gameObject);
     }
