@@ -56,6 +56,7 @@ public class Hunger : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            hasBeenFed = true;
             FeedSheep();
         }
 

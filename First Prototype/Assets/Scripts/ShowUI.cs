@@ -1,17 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowUI : MonoBehaviour
 {
     public GameObject uiObject;
     public bool isActive;
     public Item cut;
+    public bool flowerInteraction;
+    public GameObject sheep;
+    public GameObject GPSReminder;
+    public Text GPSText;
+    public bool sheepHaveBeenFed;
+    public bool GoToBedPrompt;
 
     void Start()
     {
         uiObject.SetActive(false);
+        flowerInteraction = false;
+        GoToBedPrompt = false;
+        GPSReminder.SetActive(false);
+    }
 
+    void Update()
+    {
+        if(sheep != null)
+            sheepHaveBeenFed = sheep.GetComponent<Hunger>().hasBeenFed;
+
+        if (flowerInteraction && sheepHaveBeenFed && !GoToBedPrompt)
+        {
+            GoToBedPrompt = true;
+            GPSText.text = "Sure is getting late Penelope!\nMaybe it's time to hit the hay?";
+            GPSReminder.SetActive(true);
+            StartCoroutine("WaitForSec");
+        }
     }
 
     private void OnTriggerEnter(Collider player)
@@ -22,6 +45,15 @@ public class ShowUI : MonoBehaviour
             uiObject.SetActive(true);
             isActive = true;
             //StartCoroutine("WaitForSec");
+
+            if(this.tag == "Flower")
+            {
+                //GPSText.text = "Sure is getting late Penelope!\nMaybe it's time to hit the hay?";
+                //GPSReminder.SetActive(true);
+               // StartCoroutine("WaitForSec");
+                flowerInteraction = true;
+                Debug.Log("Interacted with flower");
+            }
         }
     }
 
@@ -42,7 +74,7 @@ public class ShowUI : MonoBehaviour
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(3);
-        uiObject.SetActive(false);
+        GPSReminder.SetActive(false);
         //Destroy(uiObject);
         //Destroy(gameObject);
     }

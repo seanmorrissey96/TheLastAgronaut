@@ -42,7 +42,7 @@ public class PlantCollision : MonoBehaviour
             LevelChanger lc = levelChanger.GetComponent<LevelChanger>();
             //ToBeDestroyed tbd = toBeDestroyed.GetComponent<ToBeDestroyed>();
             //tbd.Add(collision.gameObject);
-            lc.FadeToLevel(1);
+            lc.FadeToLevel(3);
             
         }
     }
