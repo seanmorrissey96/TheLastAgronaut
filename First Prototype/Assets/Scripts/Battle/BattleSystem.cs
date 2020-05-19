@@ -25,6 +25,12 @@ public class BattleSystem : MonoBehaviour
 
     public Text dialogueText;
 
+    public AudioSource plantAttack;
+    public AudioSource plantDeath;
+    public AudioSource playerAttack1;
+    public AudioSource playerAttack2;
+    public AudioSource playerHeal;
+
     void Start()
     {
         state = BattleState.START;
@@ -94,6 +100,8 @@ public class BattleSystem : MonoBehaviour
         playerHUD.SetHP(playerUnit.currentHP);
         dialogueText.text = "Penelope feels renewed strength!";
 
+        playerHeal.Play();
+
         yield return new WaitForSeconds(2f);
 
         state = BattleState.ENEMYTURN;
@@ -124,6 +132,8 @@ public class BattleSystem : MonoBehaviour
 
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "Penelope sprays MUTATED PLANT with toxic GLYPHOSATE!";
+
+        playerAttack1.Play();
 
         if (weakToAttack)
         {
@@ -173,6 +183,8 @@ public class BattleSystem : MonoBehaviour
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "Penelope sprays MUTATED PLANT with toxic TRIAZINE!";
 
+        playerAttack1.Play();
+
         if (weakToAttack)
         {
             yield return new WaitForSeconds(2f);
@@ -204,6 +216,8 @@ public class BattleSystem : MonoBehaviour
         enemyHUD.SetHP(enemyUnit.currentHP);
         dialogueText.text = "Penelope stabs MUTATED PLANT with a pitchfork!";
 
+        playerAttack2.Play();
+
         yield return new WaitForSeconds(2f);
 
         if (isDead)
@@ -227,11 +241,14 @@ public class BattleSystem : MonoBehaviour
 
         playerHUD.SetHP(playerUnit.currentHP);
 
+        plantAttack.Play();
+
         yield return new WaitForSeconds(2f);
 
         if(isDead)
         {
             state = BattleState.LOST;
+            plantDeath.Play();
             EndBattle();
         }
         else

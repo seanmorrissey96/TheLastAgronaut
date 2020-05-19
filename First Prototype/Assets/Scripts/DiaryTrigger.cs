@@ -20,7 +20,10 @@ public class DiaryTrigger : MonoBehaviour
 
     public GameObject enemyPlant;
 
+    public AudioSource writing;
     public AudioSource asteroidSound;
+
+    bool cue;
 
     public bool isActive;
     public int dayCount = 1;
@@ -46,7 +49,9 @@ public class DiaryTrigger : MonoBehaviour
                     Debug.Log("Click 1");
                     uiObject1.SetActive(true);
                     isActive = true;
-                    asteroidSound.Play();
+                    writing.Play();
+
+                    StartCoroutine(WaitForSec());
                     dayCount = 2;
                 }
                 else if (dayCount == 2 && isActive != true && dnc.pause == true)
@@ -54,6 +59,7 @@ public class DiaryTrigger : MonoBehaviour
                     Debug.Log("Click 2");
                     uiObject2.SetActive(true);
                     isActive = true;
+                    writing.Play();
                     dayCount = 3;
                 }
                 else if (dayCount == 3 && isActive != true && dnc.pause == true)
@@ -61,6 +67,7 @@ public class DiaryTrigger : MonoBehaviour
                     Debug.Log("Click 3");
                     uiObject3.SetActive(true);
                     isActive = true;
+                    writing.Play();
                     dayCount = 1;
                 }
             }
@@ -88,6 +95,8 @@ public class DiaryTrigger : MonoBehaviour
 
                 plantDay1.SetActive(false);
                 plantDay2.SetActive(true);
+
+                writing.Stop();
             }
             else if(dayCount == 3)
             {
@@ -98,6 +107,8 @@ public class DiaryTrigger : MonoBehaviour
                 dnc.timeOfDay = 1;
 
                 enemyPlant.SetActive(true);
+
+                writing.Stop();
             }
             else if((dayCount == 1) && isActive == true)
             {
@@ -108,5 +119,11 @@ public class DiaryTrigger : MonoBehaviour
                 dnc.timeOfDay = 1;
             }
         }
+    }
+
+    IEnumerator WaitForSec()
+    {
+        yield return new WaitForSeconds(3.0f);
+        asteroidSound.Play();
     }
 }

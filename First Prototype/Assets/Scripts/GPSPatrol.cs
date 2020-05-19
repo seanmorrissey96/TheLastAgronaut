@@ -18,6 +18,8 @@ public class GPSPatrol : MonoBehaviour
     public Text dialogue1;
     public bool showReminderText;
 
+    public AudioSource gpsSound;
+
     NavMeshAgent _navMeshAgent;
     void Start()
     {
@@ -41,6 +43,7 @@ public class GPSPatrol : MonoBehaviour
             if (patrollingTo >= 3)
             {
                 dialogue1.text = "Some of the sheep seem a little down, go see if you can cheer them up!\nPress 'E' when near a sheep to feed it.";
+                gpsSound.Play();
                 StartCoroutine("WaitForSec");
             }
             //print("DISTANCE TO DEST: " + Vector3.Distance(transform.position, moveSpots[patrollingTo].position));

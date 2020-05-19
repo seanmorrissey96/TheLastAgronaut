@@ -18,6 +18,8 @@ public class Hunger : MonoBehaviour
     public Text dialogue1;
     public bool hasBeenFed;
 
+    public AudioSource feedSound;
+
     void Start()
     {
         hungerCounter.text = "100";
@@ -34,17 +36,17 @@ public class Hunger : MonoBehaviour
         hungerToDisplay = Mathf.RoundToInt(currentHunger);
         hungerCounter.text = hungerToDisplay.ToString();
 
-        if (hungerToDisplay > 90)
+        if (hungerToDisplay >= 66)
         {
             sheepMoodImage.texture = sheepMoodHappy;
         }
 
-        if (hungerToDisplay < 90)
+        if (hungerToDisplay < 66 && hungerToDisplay > 33)
         {
             sheepMoodImage.texture = sheepMoodSad;
         }
 
-        if (hungerToDisplay < 85)
+        if (hungerToDisplay <= 33)
         {
             sheepMoodImage.texture = sheepMoodAngry;
         }
@@ -87,6 +89,7 @@ public class Hunger : MonoBehaviour
 
         //Inventory.instance.Add(milk);
         hasBeenFed = true;
+        feedSound.Play();
         //Debug.Log("Wow, I'm full and can't eat that all Penelope!");
         //StartCoroutine("WaitForSec");
     }

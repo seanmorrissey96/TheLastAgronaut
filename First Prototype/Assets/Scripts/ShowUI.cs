@@ -29,6 +29,8 @@ public class ShowUI : MonoBehaviour
     private string sceneName;
     private bool winState;
 
+    public AudioSource gps;
+
     void Start()
     {
         uiObject.SetActive(false);
@@ -68,6 +70,7 @@ public class ShowUI : MonoBehaviour
             {
                 dialogue1 = true;
                 GPSText.text = "Penelope! We have a problem!";
+                gps.Play();
                 GPSReminder.SetActive(true);
                 StartCoroutine("WaitForSec");
             }
@@ -75,6 +78,7 @@ public class ShowUI : MonoBehaviour
             {
                 dialogue2 = true;
                 GPSText.text = "Penelope! We're under attack!";
+                gps.Play();
                 GPSReminder.SetActive(true);
                 StartCoroutine("WaitForSec");
             }
@@ -84,7 +88,8 @@ public class ShowUI : MonoBehaviour
                 GPSReminder.SetActive(true);
                 dialogue2 = true;
                 GPSText.text = "Penelope! You won!\n That asteroid must have been carrying a virus.";
-                
+                gps.Play();
+
                 StartCoroutine("WaitForSec");
             }
             //else if(dayCount == 2 && !diaryUI1.activeSelf && playerPosition < 0 && !dialogue2)
@@ -104,6 +109,8 @@ public class ShowUI : MonoBehaviour
         {
             GoToBedPrompt = true;
             GPSText.text = "Sure is getting late Penelope!\nMaybe it's time to hit the hay?";
+            gps.Play();
+
             GPSReminder.SetActive(true);
             StartCoroutine("WaitForSec");
         }

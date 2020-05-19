@@ -20,6 +20,8 @@ public class ShowGPSReminderUI : MonoBehaviour
     private string sceneName;
     private int dayCount;
 
+    public AudioSource gpsSound;
+
     void Start()
     {
         uiObject.SetActive(false);
@@ -62,6 +64,7 @@ public class ShowGPSReminderUI : MonoBehaviour
             if (player.gameObject.tag == "Player" && flowerInteraction)
             {
                 reminderText.text = "Sure is getting late Penelope.";
+                gpsSound.Play();
                 uiObject.SetActive(true);
                 isActive = true;
             }
@@ -71,6 +74,7 @@ public class ShowGPSReminderUI : MonoBehaviour
             if(player.gameObject.tag == "Player" && sheepHaveBeenFed && !flowerInteraction)
             {
                 reminderText.text = "Have you checked on the flowers yet today?";
+                gpsSound.Play();
                 uiObject.SetActive(true);
                 isActive = true;
             }
@@ -81,6 +85,7 @@ public class ShowGPSReminderUI : MonoBehaviour
             if (player.gameObject.tag == "Player")
             {
                 reminderText.text = "Last night an asteroid hit the island!\nI'll have to fix the door in time for tomorrow.";
+                gpsSound.Play();
                 uiObject.SetActive(true);
                 isActive = true;
             }
@@ -90,6 +95,7 @@ public class ShowGPSReminderUI : MonoBehaviour
             if (player.gameObject.tag == "Player")
             {
                 reminderText.text = "Go kill the plant that's attacking the sheep!";
+                gpsSound.Play();
                 uiObject.SetActive(true);
                 isActive = true;
             }
