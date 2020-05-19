@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShowUI : MonoBehaviour
 {
@@ -23,7 +24,10 @@ public class ShowUI : MonoBehaviour
 
     private bool dialogue1;
     private bool dialogue2;
+    private bool dialogue3;
     private float playerPosition;
+    private string sceneName;
+    private bool winState;
 
     void Start()
     {
@@ -35,7 +39,21 @@ public class ShowUI : MonoBehaviour
 
     void Update()
     {
-        if(penelope != null)
+        Scene currentScene = SceneManager.GetActiveScene();
+        sceneName = currentScene.name;
+
+        
+
+        if(sceneName == "AnimatedSheepLevel")
+        {
+            winState = false;
+        }
+        else if(sceneName == "BattleWinState")
+        {
+            winState = true;
+        }
+
+        if (penelope != null)
         {
             playerPosition = penelope.transform.position.x;
         }
@@ -46,11 +64,27 @@ public class ShowUI : MonoBehaviour
             dayCount = diary.GetComponent<DiaryTrigger>().dayCount;
             
 
-            if (dayCount == 2 && !diaryUI1.activeSelf && playerPosition > 0 && !dialogue1)
+            if (dayCount == 2 && !diaryUI1.activeSelf && playerPosition > 0 && !dialogue1 && !winState)
             {
                 dialogue1 = true;
                 GPSText.text = "Penelope! We have a problem!";
                 GPSReminder.SetActive(true);
+                StartCoroutine("WaitForSec");
+            }
+            else if(dayCount == 3  && !diaryUI2.activeSelf && !dialogue2 && !winState)
+            {
+                dialogue2 = true;
+                GPSText.text = "Penelope! We're under attack!";
+                GPSReminder.SetActive(true);
+                StartCoroutine("WaitForSec");
+            }
+            else if (winState && !dialogue3)
+            {
+                Debug.Log("Winstate: " + winState);
+                GPSReminder.SetActive(true);
+                dialogue2 = true;
+                GPSText.text = "Penelope! You won!\n That asteroid must have been carrying a virus.";
+                
                 StartCoroutine("WaitForSec");
             }
             //else if(dayCount == 2 && !diaryUI1.activeSelf && playerPosition < 0 && !dialogue2)

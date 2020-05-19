@@ -85,8 +85,17 @@ public class ShowGPSReminderUI : MonoBehaviour
                 isActive = true;
             }
         }
+        else if(toBeShown && sheepHaveBeenFed && dayCount == 3)
+        {
+            if (player.gameObject.tag == "Player")
+            {
+                reminderText.text = "Go kill the plant that's attacking the sheep!";
+                uiObject.SetActive(true);
+                isActive = true;
+            }
+        }
         //Debug.Log(hunger);
-        
+
     }
 
     private void OnTriggerExit(Collider player)

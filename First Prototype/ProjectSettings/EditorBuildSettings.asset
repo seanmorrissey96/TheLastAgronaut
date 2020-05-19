@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Level.unity
     guid: fee264703b7f88e458125450f3d1b59c
+  - enabled: 1
+    path: Assets/Scenes/BattleWinState.unity
+    guid: 76e911a7bdb257b44a1acf051dce9dd6
   m_configObjects: {}

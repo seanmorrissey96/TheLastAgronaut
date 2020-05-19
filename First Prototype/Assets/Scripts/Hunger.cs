@@ -52,6 +52,7 @@ public class Hunger : MonoBehaviour
         if (hungerToDisplay <= 0)
         {
             hungerToDisplay = 0;
+            currentHunger = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.E))

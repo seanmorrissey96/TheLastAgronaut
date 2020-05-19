@@ -12,6 +12,7 @@ public class BattleSystem : MonoBehaviour
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
     public BattleState state;
+    public bool playerWin;
 
     Unit playerUnit;
     Unit enemyUnit;
@@ -245,6 +246,7 @@ public class BattleSystem : MonoBehaviour
         if(state == BattleState.WON)
         {
             dialogueText.text = "You won the battle!";
+            playerWin = true;
         }
         else if(state == BattleState.LOST)
         {
@@ -253,6 +255,6 @@ public class BattleSystem : MonoBehaviour
 
         LevelChanger lc = levelChanger.GetComponent<LevelChanger>();
         
-        lc.FadeToLevel(0);
+        lc.FadeToLevel(4);
     }
 }
