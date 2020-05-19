@@ -21,6 +21,8 @@ public class SheepHealth : MonoBehaviour
     public AudioSource deathSound;
     private static int dayNum;
 
+    public Item med;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -76,6 +78,11 @@ public class SheepHealth : MonoBehaviour
             AllDead();
             isDestroyed6 = true;
         }
+
+        if(Input.GetKeyDown(KeyCode.F) && Inventory.instance.i > 0)
+        {
+            HealSheep();
+        }
     }
 
     private void AllDead()
@@ -102,5 +109,18 @@ public class SheepHealth : MonoBehaviour
         int rand = Random.Range(0, transform.childCount);
         Destroy(transform.GetChild(rand).gameObject, 3);
         Debug.Log("A sheep has died!");
+    }
+
+    private void HealSheep()
+    {
+        if (currentHealth > 0 && currentHealth < 135)
+        {
+            currentHealth = currentHealth + 15f;
+        }
+        else if (currentHealth > 0 && currentHealth >= 135)
+        {
+            currentHealth = 150f;
+            Inventory.instance.Remove(med);
+        }
     }
 }

@@ -15,8 +15,10 @@ public class Hunger : MonoBehaviour
     public Item milk;
 
     public GameObject penelopeDialoguePanel;
+    public GameObject penelopeDialoguePanel2;
     public Text dialogue1;
     public bool hasBeenFed;
+
 
     public AudioSource feedSound;
 
@@ -26,6 +28,7 @@ public class Hunger : MonoBehaviour
         currentHunger = 100;
         sheepMoodImage.texture = sheepMoodHappy;
         penelopeDialoguePanel.SetActive(false);
+        penelopeDialoguePanel2.SetActive(false);
         hasBeenFed = false;
     }
 
@@ -87,17 +90,38 @@ public class Hunger : MonoBehaviour
             //sheepMoodImage.texture = sheepMoodHappy;
         }
 
-        //Inventory.instance.Add(milk);
+        Inventory.instance.Add(milk);
         hasBeenFed = true;
         feedSound.Play();
         //Debug.Log("Wow, I'm full and can't eat that all Penelope!");
         //StartCoroutine("WaitForSec");
     }
 
+    void OnTriggerStay(Collider collider)
+    {
+        if(collider.tag == "Player")
+        {
+            penelopeDialoguePanel.SetActive(true);
+        }
+        else if(collider.tag == "Player" && DayNightCycle.dayNumber > 1)
+        {
+            penelopeDialoguePanel.SetActive(true);
+            penelopeDialoguePanel2.SetActive(true);
+        }
+    }
+    void OnTriggerExit(Collider collider)
+    {
+        if(collider.tag == "Player")
+        {
+            penelopeDialoguePanel.SetActive(false);
+            penelopeDialoguePanel2.SetActive(false);
+        }
+    }
+
     IEnumerator WaitForSec()
     {
         hasBeenFed = false;
         yield return new WaitForSeconds(6);
-        penelopeDialoguePanel.SetActive(false);
+        //penelopeDialoguePanel.SetActive(false);
     }
 }

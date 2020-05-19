@@ -20,6 +20,9 @@ public class DiaryTrigger : MonoBehaviour
 
     public GameObject enemyPlant;
 
+    public GameObject gameOverScreen;
+    public GameObject progressText;
+
     public AudioSource writing;
     public AudioSource asteroidSound;
 
@@ -35,15 +38,18 @@ public class DiaryTrigger : MonoBehaviour
         uiObject2.SetActive(false);
         uiObject3.SetActive(false);
         enemyPlant.SetActive(false);
+        gameOverScreen.SetActive(false);
+        progressText.SetActive(false);
     }
 
     private void OnTriggerStay(Collider player)
     {
         if(player.gameObject.tag == "Player")
         {
+            progressText.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("E key in trigger");
+                progressText.SetActive(false);
                 if (dayCount == 1 && dnc.pause == true)
                 {
                     Debug.Log("Click 1");
@@ -79,6 +85,7 @@ public class DiaryTrigger : MonoBehaviour
     {
         if(player.gameObject.tag == "Player")
         {
+            progressText.SetActive(false);
             if(dayCount == 2)
             {
                 uiObject1.SetActive(false);
@@ -114,6 +121,7 @@ public class DiaryTrigger : MonoBehaviour
             {
                 uiObject3.SetActive(false);
                 isActive = false;
+                gameOverScreen.SetActive(true);
 
                 dnc.pause = false;
                 dnc.timeOfDay = 1;
