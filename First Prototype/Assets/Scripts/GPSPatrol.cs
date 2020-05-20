@@ -19,7 +19,6 @@ public class GPSPatrol : MonoBehaviour
     public bool showReminderText;
 
     public AudioSource gpsSound;
-    //public Animator anim;
 
     NavMeshAgent _navMeshAgent;
     void Start()
@@ -29,8 +28,6 @@ public class GPSPatrol : MonoBehaviour
         waitTime = startWaitTime;
         patrollingTo = 0;
         showReminderText = false;
-
-        //anim = GetComponent<Animator>();
     }
 
     void Update()
@@ -45,18 +42,14 @@ public class GPSPatrol : MonoBehaviour
             //transform.position = Vector3.MoveTowards(transform.position, moveSpots[patrollingTo].position, speed * Time.deltaTime);
             if (patrollingTo >= 3)
             {
-                //anim.SetBool("isWalking", true);
                 dialogue1.text = "Some of the sheep seem a little down, go see if you can cheer them up!\nPress 'E' when near a sheep to feed it.";
                 gpsSound.Play();
                 StartCoroutine("WaitForSec");
-                
             }
             //print("DISTANCE TO DEST: " + Vector3.Distance(transform.position, moveSpots[patrollingTo].position));
             //print("WAITTIME: " + waitTime);
             if (Vector3.Distance(transform.position, moveSpots[patrollingTo].position) < 1.2f)
             {
-                //anim.SetBool("isWalking", true);
-
                 if (waitTime <= 0)
                 {
                     if (patrollingTo < moveSpots.Length - 1)
@@ -65,12 +58,10 @@ public class GPSPatrol : MonoBehaviour
                     }
 
                     waitTime = startWaitTime;
-                    
                 }
                 else
                 {
                     waitTime -= Time.deltaTime;
-                   
                 }
             }
 
