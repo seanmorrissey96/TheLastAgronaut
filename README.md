@@ -7,11 +7,19 @@ The Last Agronaut was developed by Team Nova, as part of the Fourth Year Team Pr
 
 ## Controls:
 W - Forward
+
 A - Strafe Right
+
 S - Strafe Left
+
 D - Backwards
+
 Mouse - Camera
+
 Shift + Mouse - Rotate Camera Around Player
+
 C - Crafting 
+
 E - Feed Sheep
+
 F - Heal Sheep
