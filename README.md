@@ -4,3 +4,14 @@ The Last Agronaut is a third person sci-fi RPG, in which the player takes the ro
 
 
 The Last Agronaut was developed by Team Nova, as part of the Fourth Year Team Project in the Computing in Games Development course at DkIT. 
+
+## Controls:
+W - Forward
+A - Strafe Right
+S - Strafe Left
+D - Backwards
+Mouse - Camera
+Shift + Mouse - Rotate Camera Around Player
+C - Crafting 
+E - Feed Sheep
+F - Heal Sheep
